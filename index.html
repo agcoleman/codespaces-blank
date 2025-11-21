@@ -1,24 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" herf="style.css"/>
-    <script defer src="script.js"></script>
 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iron Man  Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <p class="bum ">Godzilla or KingKong </p>
-    <img class="LeftRight" src="begin.jpg">
-    <img class="godzilla" src="godzilla.jpg">
-    <img class="monster" src="monster.jpg">
-    <img class="monkey" src="monkey.jpg">
-    <img class="Kingkong" src="Kingkong.jpg">
-    <img class="bigmonk" src="bigmonk.jpg">
-    <button class="left"> left </button>
-    <button  class="right"> right  </button>
+  <div class="container">
+    <header>
+      <h1>Iron Man Quiz !    </h1>
+      <img src="Iron-Man-Logo.png" alt="Iron Man Logo" class="header-img"/>
+    </header>
+    <form id="quiz-form">
+     
+      <div class="question">
+        <p>1. What is Tony Starks alter ego?</p>
+        <label><input type="radio" name="q1" value="a" /> Iron Man</label>
+        <label><input type="radio" name="q1" value="b" /> Captain America</label>
+        <label><input type="radio" name="q1" value="c" /> Thor</label>
+        <label><input type="radio" name="q1" value="d" /> Hulk</label>
+      </div>
+      
+    
+      <div class="question">
+        <p>2. What material does he use for his suit?</p>
+        <label><input type="radio" name="q2" value="a" /> Steel</label>
+        <label><input type="radio" name="q2" value="b" /> Vibranium</label>
+        <label><input type="radio" name="q2" value="c" /> Iron</label>
+        <label><input type="radio" name="q2" value="d" /> Titanium</label>
+      </div>
+    
+      <div class="question">
+        <p>3. Before becoming Iron Man, Tony Stark had already made tech for military aircraft (True/False)</p>
+        <label><input type="radio" name="q3" value="true" /> True</label>
+        <label><input type="radio" name="q3" value="false" /> False</label>
+      </div>
+      
+ 
+      <div class="question">
+        <p>4. Tony Stark used a suit that could operate autonomously even if he was unconscious. (True/False)</p>
+        <label><input type="radio" name="q4" value="true" /> True</label>
+        <label><input type="radio" name="q4" value="false" /> False</label>
+      </div>
+      
+    
+      <div class="question">
+        <p>5. What is Tony Stark's company called?</p>
+        <input type="text" id="q6" placeholder="Your answer here" />
+      </div>
+      
+
+      
+      <button type="button" id="submit-btn">Submit Answers</button>
+    </form>
+    <div id="results"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
 
 </body>
 </html>

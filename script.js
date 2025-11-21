@@ -1,82 +1,26 @@
-let left = document .querySelector('.left');
-let right = document .querySelector('.right');
-let LeftRight = document .querySelector('.LeftRight');
-let godzilla = document .querySelector('.godzilla');
-let monster = document .querySelector('.monster');
-let bigmonk = document .querySelector('.bigmonk');
-let Kingkong = document .querySelector('.Kingkong');
-let monkey = document .querySelector('.monkey');
-let bum = document .querySelector('.bum');
-godzilla.style.display ="none";
-monster.style.display ="none";
-monkey.style.display= "none";
-Kingkong.style.display = "none";
-bigmonk.style.display= "none";
+
+document.querySelector('#submit-btn').addEventListener('click', checkAnswers);
+
+function checkAnswers() {
+  let score = 0;
+  const totalQuestions = 5;
+  const resultsDiv = document.querySelector('#results');
+
+ 
+  const q1 = document.querySelector('input[name="q1"]:checked')?.value;
+  const q2 = document.querySelector('input[name="q2"]:checked')?.value;
+  const q3 = document.querySelector('input[name="q3"]:checked')?.value;
+  const q4 = document.querySelector('input[name="q4"]:checked')?.value;
+  const q6 = document.querySelector('#q6').value.trim().toLowerCase();
 
 
 
-left.addEventListener( 'click' ,function() {
-
-    LeftRight.style.display ="none";
-    left.style.display ="none";
-    right.style.display ="none";
-    godzilla.style.display ="block";
-    bum.innerHTML="Godzilla is ready to fight dbl click to fight king kong use scroll wheel to be peaceful"
-})
-
-godzilla.addEventListener( 'wheel' ,function() {
-
-    LeftRight.style.display ="none";
-    left.style.display ="none";
-    right.style.display ="none";
-    godzilla.style.display ="none";
-    monster.style.display ="block";
-    bum.innerHTML="Godzilla decided king kong didnt deserve a beating today"
-})
-
-//
+  if (q1 === 'a') score++;
+  if (q2 === 'd') score++;
+  if (q3 === 'true') score++;
+  if (q4 === 'true') score++; 
+  if (q6 === 'Stark') score++;
 
 
-godzilla.addEventListener( 'dblclick' ,function() {
-
-    LeftRight.style.display ="none";
-    left.style.display ="none";
-    right.style.display ="none";
-    godzilla.style.display ="none";
-    monkey.style.display ="block";
-      bum.innerHTML="Godzilla is now ready to face king kong in a fight"
-})
-
-
-
-right.addEventListener( 'click' ,function() {
-
-    LeftRight.style.display ="none";
-    left.style.display ="none";
-    right.style.display ="none";
-    Kingkong.style.display ="block";
-    bum.innerHTML="King Kong is ready to fight dbl click to fight king kong use scroll wheel to be peaceful"
-})
-
-Kingkong.addEventListener( 'wheel' ,function() {
-
-    LeftRight.style.display ="none";
-    left.style.display ="none";
-    right.style.display ="none";
-    Kingkong.style.display ="none";
-    bigmonk.style.display ="block";
-    bum.innerHTML="Godzilla decided king kong didnt deserve a beating today"
-})
-
-//
-
-
-Kingkong.addEventListener( 'dblclick' ,function() {
-
-    LeftRight.style.display ="none";
-    left.style.display ="none";
-    right.style.display ="none";
-    Kingkong.style.display ="none";
-    monkey.style.display ="block";
-      bum.innerHTML="Godzilla is now ready to face king kong in a fight"
-})
+  resultsDiv.innerHTML = `Your score: ${score} out of ${totalQuestions}`;
+}

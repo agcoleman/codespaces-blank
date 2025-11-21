@@ -1,1 +1,93 @@
-img{width:300px;}
+/* General Page Style */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #1a1a1a;
+  color: #fff;
+}
+
+/* Main Container */
+.container {
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  background: #2b2b2b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 50px;
+  color: #ff3b3b;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.header-img {
+  width: 150px;
+  margin-top: 10px;
+}
+
+/* Quiz Layout */
+.question {
+  background: #333;
+  padding: 15px;
+  margin: 15px 0;
+  border-left: 5px solid #ff3b3b;
+  border-radius: 5px;
+}
+
+.question p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+/* Text Input */
+#q6 {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #555;
+}
+
+/* Submit Button */
+#submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ff3b3b;
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.2s ease-in-out;
+}
+
+#submit-btn:hover {
+  background: #ff5e5e;
+}
+
+/* Results */
+#results {
+  margin-top: 20px;
+  font-size: 22px;
+  text-align: center;
+  font-weight: bold;
+  color: #ffd700;
+}
